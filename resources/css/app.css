@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Syne', ui-sans-serif, system-ui, sans-serif;
+    --color-pine: #0f3d32;
+    --color-teal: #1a7a66;
+    --color-mist: #e7f1ed;
+    --color-ink: #121a17;
+    --color-gold: #c9a227;
+    --color-foam: #f3faf7;
+}
+
+:root {
+    --brand-pine: #0f3d32;
+    --brand-teal: #1a7a66;
+    --brand-mist: #e7f1ed;
+    --brand-ink: #121a17;
+    --brand-gold: #c9a227;
+    --brand-foam: #f3faf7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--brand-ink);
+    background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(26, 122, 102, 0.12), transparent 60%),
+        radial-gradient(900px 500px at 100% 0%, rgba(201, 162, 39, 0.1), transparent 55%),
+        linear-gradient(180deg, #f3faf7 0%, #e7f1ed 48%, #f7fbf9 100%);
+    font-family: 'Figtree', sans-serif;
+}
+
+.font-display {
+    font-family: 'Syne', sans-serif;
+}
+
+.hero-pan {
+    animation: heroPan 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroPan {
+    from { transform: scale(1.05) translate3d(0, 0, 0); }
+    to { transform: scale(1.12) translate3d(-2%, -1%, 0); }
+}
+
+.fade-up {
+    animation: fadeUp 0.9s ease both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.float-soft {
+    animation: floatSoft 5s ease-in-out infinite;
+}
+
+@keyframes floatSoft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
